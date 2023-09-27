@@ -1,6 +1,6 @@
 # OpenCore For Hasee KingBook X57S1
 
- - OpenCore 0.7.2
+ - OpenCore 0.95
  - Intel Core i7-1065G7
  - Hasee HINS02 ( Intel 495 Series Chipset, Intel Ice Point-LP, Intel Ice Lake-U )
  - Crucial 8 GB DDR4-2666 x2
@@ -19,13 +19,13 @@
  - [x] HiDPI (Big Thanks to [m0d16l14n1]) [#3-791975322]
  - [x] Backlight
  - [x] Fn Brightness Keys
- - [ ] HDMI (Video And Audio)
+ - [x] HDMI (Video And Audio)
  - [x] Internal Speaker [4CH Audio]
  - [x] Headphone (Big Thanks to [m0d16l14n1], [agasecond]) [#3-765060946]
  - [x] Usb (Built In)
  - [x] USB-C Charge
  - [x] USB-C To HDMI Adapter
- - [ ] Thunderbolt 3
+ - [x] Thunderbolt 3
  - [x] [Wireless Network] (AX201)
  - [x] [Bluetooth] (0x8087, 0x0026)
  - [x] Battery Management
@@ -36,7 +36,7 @@
  - [x] Sleep From (Fn+Esc Key)
  - [x] Wake-Up (Lid)
  - [x] Wake-Up (PS/2 Keyboard) (Big Thanks to [m0d16l14n1])
- - [ ] Wake-Up (Usb Device)
+ - [x] Wake-Up (Usb Device)
  - [x] WebCam
  - [x] [Card Reader] (Big Thanks to [0xFireWolf], [m0d16l14n1]) [#8]
 
