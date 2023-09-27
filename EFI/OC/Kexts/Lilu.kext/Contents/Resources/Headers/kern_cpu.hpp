@@ -93,7 +93,6 @@ namespace CPUInfo {
 		CPU_MODEL_ROCKETLAKE_S   =  0xA7, /* desktop RocketLake */
 		CPU_MODEL_TIGERLAKE_U    =  0x8C,
 		CPU_MODEL_ALDERLAKE_S    =  0x97,
-		CPU_MODEL_RAPTORLAKE_S   =  0xB7,
 	};
 
 	/**
@@ -127,7 +126,6 @@ namespace CPUInfo {
 		RocketLake,
 		TigerLake,
 		AlderLake,
-		RaptorLake,
 		MaxGeneration
 	};
 
