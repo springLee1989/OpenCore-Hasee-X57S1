@@ -328,49 +328,28 @@
             <key>MmioWhitelist</key>
             <array/>
             <key>Patch</key>
-            <array>
-                <dict>
-                    <key>Arch</key>
-                    <string>Any</string>
-                    <key>Comment</key>
-                    <string>macOS to hacOS</string>
-                    <key>Count</key>
-                    <integer>1</integer>
-                    <key>Enabled</key>
-                    <false/>
-                    <key>Find</key>
-                    <data>bWFjT1M=</data>
-                    <key>Identifier</key>
-                    <string>Apple</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>Replace</key>
-                    <data>aGFjT1M=</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
-            </array>
+            <array/>
             <key>Quirks</key>
             <dict>
                 <key>AllowRelocationBlock</key>
                 <false/>
                 <key>AvoidRuntimeDefrag</key>
                 <true/>
+                <key>ClearTaskSwitchBit</key>
+                <false/>
                 <key>DevirtualiseMmio</key>
-                <true/>
+                <false/>
                 <key>DisableSingleUser</key>
                 <false/>
                 <key>DisableVariableWrite</key>
                 <false/>
                 <key>DiscardHibernateMap</key>
-                <false/>
+                <true/>
                 <key>EnableSafeModeSlide</key>
                 <false/>
                 <key>EnableWriteUnprotector</key>
+                <false/>
+                <key>FixupAppleEfiImages</key>
                 <false/>
                 <key>ForceBooterSignature</key>
                 <false/>
@@ -402,6 +381,82 @@
         <dict>
             <key>Add</key>
             <dict>
+                <key>####PciRoot(0x0)/Pci(0x2,0x0)-01</key>
+                <dict>
+                    <key>AAPL,GfxYTile</key>
+                    <data>AQAAAA==</data>
+                    <key>AAPL,ig-platform-id</key>
+                    <data>AgBRig==</data>
+                    <key>AAPL,slot-name</key>
+                    <string>Built-in</string>
+                    <key>device-id</key>
+                    <data>UYoAAA==</data>
+                    <key>device_type</key>
+                    <string>Intel Iris Plus Graphics G7 64EU</string>
+                    <key>dpcd-max-link-rate</key>
+                    <data>CgAAAA==</data>
+                    <key>enable-backlight-registers-fix</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-cdclk-frequency-fix</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-dpcb-max-link-rate-fix</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-dvmt-calc-fix</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-max-pixel-clock-override</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-patch-enable</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-patch0-enable</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-patch0-find</key>
+                    <data>dkZI/wUrOwk=</data>
+                    <key>framebuffer-unifiedmen</key>
+                    <data>AAAAgA==</data>
+                    <key>igfxfw</key>
+                    <data>AgAAAA==</data>
+                    <key>max-pixel-clock-frequency</key>
+                    <data>AQAAAA==</data>
+                    <key>model</key>
+                    <string>Intel Iris Plus Graphics G7</string>
+                    <key>rps-control</key>
+                    <data>AQAAAA==</data>
+                </dict>
+                <key>###PciRoot(0x0)/Pci(0x2,0x0)-2</key>
+                <dict>
+                    <key>AAPL,GfxYTile</key>
+                    <data>AQAAAA==</data>
+                    <key>AAPL,ig-platform-id</key>
+                    <data>AgBRig==</data>
+                    <key>backlight-smoother-interval</key>
+                    <data>BwAAAA==</data>
+                    <key>backlight-smoother-steps</key>
+                    <data>LQAAAA==</data>
+                    <key>device-id</key>
+                    <data>UYoAAA==</data>
+                    <key>enable-backlight-registers-fix</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-backlight-smoother</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-cdclk-frequency-fix</key>
+                    <data>AQAAAA==</data>
+                    <key>enable-dbuf-early-optimizer</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-patch0-enable</key>
+                    <data>AQAAAA==</data>
+                    <key>framebuffer-patch0-find</key>
+                    <data>dkZI/wUrOwk=</data>
+                    <key>framebuffer-patch0-replace</key>
+                    <data>60ZI/wUrOwk=</data>
+                    <key>igfxfw</key>
+                    <data>AgAAAA==</data>
+                    <key>max-pixel-clock-frequency</key>
+                    <data>AQAAAA==</data>
+                    <key>model</key>
+                    <string>Intel Iris Plus Graphics G7</string>
+                    <key>rps-control</key>
+                    <data>AQAAAA==</data>
+                </dict>
                 <key>#PciRoot(0x0)/Pci(0xD,0x2)</key>
                 <dict>
                     <key>DMAMiscReg</key>
@@ -437,22 +492,23 @@
                     <key>layout-id</key>
                     <data>RgAAAA==</data>
                 </dict>
+                <key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
+                <dict>
+                    <key>AAPL,slot-name</key>
+                    <string>Internal@0,31,4</string>
+                    <key>device_type</key>
+                    <string>SMBus</string>
+                    <key>model</key>
+                    <string>Ice Lake-LP SMBus Controller</string>
+                </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
-                    <key>AAPL,Gfx324</key>
-                    <data>AQAAAA==</data>
                     <key>AAPL,GfxYTile</key>
                     <data>AQAAAA==</data>
                     <key>AAPL,ig-platform-id</key>
                     <data>AgBRig==</data>
-                    <key>backlight-smoother-interval</key>
-                    <data>BwAAAA==</data>
-                    <key>backlight-smoother-steps</key>
-                    <data>LQAAAA==</data>
-                    <key>enable-backlight-registers-fix</key>
-                    <data>AQAAAA==</data>
-                    <key>enable-backlight-smoother</key>
-                    <data>AQAAAA==</data>
+                    <key>device-id</key>
+                    <data>UYoAAA==</data>
                     <key>enable-cdclk-frequency-fix</key>
                     <data>AQAAAA==</data>
                     <key>enable-dbuf-early-optimizer</key>
@@ -479,7 +535,7 @@
                     <key>BundlePath</key>
                     <string>Lilu.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.7</string>
+                    <string>V1.7.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -497,7 +553,7 @@
                     <key>BundlePath</key>
                     <string>VirtualSMC.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2</string>
+                    <string>V1.3.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -515,7 +571,7 @@
                     <key>BundlePath</key>
                     <string>SMCProcessor.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2 | SMCProcessor.kext</string>
+                    <string>V1.3.7 | SMCProcessor.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -533,7 +589,7 @@
                     <key>BundlePath</key>
                     <string>SMCSuperIO.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2 | SMCSuperIO.kext</string>
+                    <string>V1.3.7 | SMCSuperIO.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -551,7 +607,7 @@
                     <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.6</string>
+                    <string>V1.7.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -569,7 +625,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.8.5 | AppleALC.kext</string>
+                    <string>V1.9.5 | AppleALC.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -587,7 +643,7 @@
                     <key>BundlePath</key>
                     <string>SMCLightSensor.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2 | SMCLightSensor.kext</string>
+                    <string>V1.3.7 | SMCLightSensor.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -605,7 +661,7 @@
                     <key>BundlePath</key>
                     <string>SMCBatteryManager.kext</string>
                     <key>Comment</key>
-                    <string>V1.3.2 | SMCBatteryManager.kext</string>
+                    <string>V1.3.7 | SMCBatteryManager.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -623,7 +679,7 @@
                     <key>BundlePath</key>
                     <string>ECEnabler.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.4 | ECEnabler.kext</string>
+                    <string>V1.0.6 | ECEnabler.kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -677,7 +733,7 @@
                     <key>BundlePath</key>
                     <string>HibernationFixup.kext</string>
                     <key>Comment</key>
-                    <string>V1.4.9</string>
+                    <string>V1.5.4</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -713,7 +769,7 @@
                     <key>BundlePath</key>
                     <string>VoodooPS2Controller.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.5</string>
+                    <string>V2.3.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -731,7 +787,7 @@
                     <key>BundlePath</key>
                     <string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Keyboard.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.5</string>
+                    <string>V2.3.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -785,7 +841,7 @@
                     <key>BundlePath</key>
                     <string>VoodooI2C.kext/Contents/PlugIns/VoodooInput.kext</string>
                     <key>Comment</key>
-                    <string>V1.1.4</string>
+                    <string>V1.1.6</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -803,7 +859,7 @@
                     <key>BundlePath</key>
                     <string>VoodooI2C.kext</string>
                     <key>Comment</key>
-                    <string>V2.8</string>
+                    <string>V2.9.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -875,7 +931,7 @@
                     <key>BundlePath</key>
                     <string>BlueToolFixup.kext</string>
                     <key>Comment</key>
-                    <string>V2.6.8</string>
+                    <string>V2.7.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -883,7 +939,7 @@
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
-                    <string>21.0.0</string>
+                    <string></string>
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
@@ -893,7 +949,7 @@
                     <key>BundlePath</key>
                     <string>IntelBTPatcher.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0</string>
+                    <string>V2.4.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -911,7 +967,7 @@
                     <key>BundlePath</key>
                     <string>IntelBluetoothInjector.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0</string>
+                    <string>V2.4.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -929,7 +985,7 @@
                     <key>BundlePath</key>
                     <string>IntelBluetoothFirmware.kext</string>
                     <key>Comment</key>
-                    <string>V2.3.0</string>
+                    <string>V2.4.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -947,7 +1003,7 @@
                     <key>BundlePath</key>
                     <string>AirportItlwm.kext</string>
                     <key>Comment</key>
-                    <string>V2.2.0</string>
+                    <string>V2.3.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -968,6 +1024,42 @@
                     <string>V1.0</string>
                     <key>Enabled</key>
                     <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>DebugEnhancer.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1.0</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/DebugEnhancer</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>USBPorts_.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0</string>
+                    <key>Enabled</key>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string></string>
                     <key>MaxKernel</key>
@@ -1035,6 +1127,36 @@
             </array>
             <key>Patch</key>
             <array>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>Base</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>USB All Port</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Find</key>
+                    <data>QYPlD0HT5UQJ6w==</data>
+                    <key>Identifier</key>
+                    <string>com.apple.iokit.IOUSBHostFamily</string>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string>22.0.0</string>
+                    <key>Replace</key>
+                    <data>QYPlP0HT5UQJ6w==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                </dict>
                 <dict>
                     <key>Arch</key>
                     <string>Any</string>
@@ -1136,9 +1258,9 @@
                 <key>ConsoleAttributes</key>
                 <integer>0</integer>
                 <key>HibernateMode</key>
-                <string>RTC</string>
+                <string>NVRAM</string>
                 <key>HibernateSkipsPicker</key>
-                <false/>
+                <true/>
                 <key>HideAuxiliary</key>
                 <true/>
                 <key>InstanceIdentifier</key>
@@ -1310,13 +1432,17 @@
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <dict>
                     <key>#INFO (prev-lang:kbd)</key>
-                    <string>en:252 (ABC), set -igfxtypec</string>
+                    <string>en:252 (ABC), set -igfxtypec ，-hbfx-disable-patch-pci hbfx-ahbm=49 -noDC9 dc6config=5</string>
                     <key>ForceDisplayRotationInEFI</key>
                     <integer>0</integer>
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
+                    <key>bluetoothExternalDongleFailed</key>
+                    <data>AA==</data>
+                    <key>bluetoothInternalControllerInfo</key>
+                    <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-hbfx-disable-patch-pci hbfx-ahbm=1  keepsyms=1 -noDC9 dc6config=5</string>
+                    <string>-v -hbfx-disable-patch-pci hbfx-ahbm=1 msgbuf=10485760 debug=0x100 keepsyms=1 -noDC9 dc6config=5</string>
                     <key>csr-active-config</key>
                     <data>dwAAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -1705,13 +1831,15 @@
                     <key>Comment</key>
                     <string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>Size</key>
                     <integer>4096</integer>
                     <key>Type</key>
                     <string>RuntimeCode</string>
                 </dict>
             </array>
+            <key>Unload</key>
+            <array/>
         </dict>
     </dict>
 </plist>
